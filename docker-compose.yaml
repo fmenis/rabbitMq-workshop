@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  rabbitmq-workshop:
+    image: rabbitmq:3.10-management
+    container_name: rabbitmq-workshop
+    restart: unless-stopped
+    hostname: "rabbitmq"
+    ports:
+      - "15672:15672"
+      - "15692:15692"
+      - "5672:5672"
+      - "5552:5552"
